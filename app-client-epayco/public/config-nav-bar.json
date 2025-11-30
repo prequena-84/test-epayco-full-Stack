@@ -1,0 +1,42 @@
+[
+    {
+        "menu": "Inicio",
+        "submenu":[
+            {
+                "label": "Inicio",
+                "link": "/"
+            }
+        ]
+    },
+    {
+        "menu": "Usuario",
+        "submenu":[
+            {
+                "label": "Registro",
+                "link": "/home/users/add"
+            },
+            {
+                "label": "Consulta",
+                "link": "/home/users"
+            }
+        ]
+    },
+    {
+        "menu": "Transacciones",
+        "submenu":[
+            {
+                "label": "Nueva Transacción",
+                "link": "/home/transactions/add"
+            }
+        ]
+    },
+        {
+        "menu": "Confirmación",
+        "submenu":[
+            {
+                "label": "Confirmar Token",
+                "link": "/home/transactions/verify"
+            }
+        ]
+    }
+]

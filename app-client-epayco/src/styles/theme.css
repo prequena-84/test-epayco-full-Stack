@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/*No se trabajo con TAILWIND*/
+/*@theme {*/
+  /*--*: initial; */ /*Metodo para modificar y crear variables desde Cero*/           
+  /*--color-singIn:*/  /*#38040e/*#6a040f;*/  /*Se agrega como variable parecido al :root pero en tailwind*/
+  /*--color-logIn:     #231942;*/
+  /*--color-formLogIn: theme(color.violet.100);*/
+/*}*/
+
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño total */
+}
+
+/* Asegura que el body ocupe toda la altura de la ventana */
+html {
+  height: 95%;   
+}
+
+body {
+  height:   95%;
+  margin:   0;
+  padding:  0;
+  font-family: sans-serif;
+}
+
+/* Asegura que esté por encima del contenido */
+.navbar {
+  z-index: 1050; 
+}
+
+/* Altura del navbar */
+.main-content {
+  margin-top: 50px; 
+  padding:    1rem;
+}
