@@ -1,0 +1,174 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+## Cliente
+
+# dependencies
+client/node_modules
+client/.pnp
+client/.pnp.*
+client/.yarn/*
+client/.yarn/patches
+client/.yarn/plugins
+client/.yarn/releases
+client/.yarn/versions
+
+# testing
+client/coverage
+
+# next.js
+client/.next/
+client/out/
+
+# production
+client/build
+
+# misc
+client/.DS_Store
+client/*.pem
+
+# debug
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+client/.env
+client/.env.development
+client/.env.production
+
+# vercel
+client/.vercel
+
+# typescript
+client/*.tsbuildinfo
+client/next-env.d.ts
+
+## End Cliente
+# compiled output
+server-DB/dist
+server-DB/node_modules
+server-DB/build
+server-DB/tasks
+
+# Logs
+server-DB/logs
+server-DB/*.log
+server-DB/npm-debug.log*
+server-DB/pnpm-debug.log*
+server-DB/yarn-debug.log*
+server-DB/yarn-error.log*
+server-DB/lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+server-DB/coverage
+server-DB/.nyc_output
+
+# IDEs and editors
+server-DB/.idea
+server-DB/.project
+server-DB/.classpath
+server-DB/.c9/
+server-DB/*.launch
+server-DB/.settings/
+server-DB/*.sublime-workspace
+
+# IDE - VSCode
+server-DB/.vscode/*
+server-DB/.vscode/settings.json
+server-DB/.vscode/tasks.json
+server-DB/.vscode/launch.json
+server-DB/.vscode/extensions.json
+
+# dotenv environment variable files
+server-DB/.env
+server-DB/.env.development.local
+server-DB/.env.test.local
+server-DB/.env.production.local
+server-DB/.env.local
+server-DB/.env.prod
+server-DB/.env.dev
+
+# temp directory
+server-DB/.temp
+server-DB/.tmp
+
+# Runtime data
+server-DB/pids
+server-DB/*.pid
+server-DB/*.seed
+server-DB/*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+server-DB/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Persistece MySQL Container Docker
+server-DB/mysql-data
+server-DB/mysql-dataclear
+
+# End Persistece MySQL Container Docker
+
+# Server Admin
+server-Admin/dist
+server-Admin/node_modules
+server-Admin/build
+server-Admin/tasks
+
+# Logs
+server-Admin/logs
+server-Admin/*.log
+server-Admin/npm-debug.log*
+server-Admin/pnpm-debug.log*
+server-Admin/yarn-debug.log*
+server-Admin/yarn-error.log*
+server-Admin/lerna-debug.log*
+
+# OS
+server-Admin/.DS_Store
+
+# Tests
+server-Admin/coverage
+server-Admin/.nyc_output
+
+# IDEs and editors
+server-Admin/.idea
+server-Admin/.project
+server-Admin/.classpath
+server-Admin/.c9/
+server-Admin/*.launch
+server-Admin/.settings/
+server-Admin/*.sublime-workspace
+
+# IDE - VSCode
+server-Admin/.vscode/*
+server-Admin/.vscode/settings.json
+server-Admin/.vscode/tasks.json
+server-Admin/.vscode/launch.json
+server-Admin/.vscode/extensions.json
+
+# dotenv environment variable files
+server-Admin/.env
+server-Admin/.env.development.local
+server-Admin/.env.test.local
+server-Admin/.env.production.local
+server-Admin/.env.local
+server-Admin/.env.prod
+server-Admin/.env.dev
+
+# temp directory
+server-Admin/.temp
+server-Admin/.tmp
+
+# Runtime data
+server-Admin/pids
+server-Admin/*.pid
+server-Admin/*.seed
+server-Admin/*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+server-Admin/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# End Server Admin
