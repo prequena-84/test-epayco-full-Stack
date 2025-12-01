@@ -1,0 +1,66 @@
+  services:
+    db:
+      image: mysql:8.0
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        ##MYSQL_DATABASE: db_ePayco
+        MYSQL_USER: userdev
+        MYSQL_PASSWORD: dev1234
+        ##MYSQL_ROOT_HOST: "%"
+      command: --default-authentication-plugin=mysql_native_password
+      ports:
+        - '3306:3306'
+      volumes:
+        - ./mysql-init:/docker-entrypoint-initdb.d  # scripts de inicialización de base de datos
+        - ./mysql-data:/var/lib/mysql               # persistencia de datos para el evaluador
+      networks:
+        - ePayco-network
+
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8080:8080
+      networks:
+        - ePayco-network
+
+    development:
+      container_name: "dev-ePayco"
+      image: dev
+      build:
+        context: .
+        target: development
+      env_file:
+        - .env.dev
+      ports:
+        - "3010:3010"
+      networks:
+        - ePayco-network
+      volumes:
+        - ./src:/src
+        - ./package*.json:/package*.json
+      restart: unless-stopped
+      depends_on:
+        - db
+
+    production:
+      container_name: "prod-ePayco"
+      image: prod
+      build:
+        context: .
+        target: production
+      env_file:
+        - .env.prod
+      ports:
+        - "8010:8010"
+      networks:
+        - ePayco-network
+      restart: unless-stopped
+      depends_on:
+        - db
+
+  networks:
+    ePayco-network:
+      ##driver: bridge ## se sutituye con el "docker network create ePayco-network" para crear una red permante bridde y para eliminarla es 'ddocker network rm ePayco-network'
+      external: true
